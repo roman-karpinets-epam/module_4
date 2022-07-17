@@ -1,5 +1,11 @@
 package org.example;
 
+import org.example.module5.Circle;
+import org.example.module5.Oval;
+import org.example.module5.Square;
+import org.example.module5.Rectangle1;
+import org.example.module5.Vector;
+
 import java.awt.*;
 
 public class Main {
@@ -25,7 +31,7 @@ public class Main {
         NumberHolder hold = new NumberHolder();
         hold.aFloat = 23.34f;
         hold.anInt = -18;
-        System.out.format("Float value is equal to %f, integer value is equal to %d", hold.aFloat, hold.anInt);
+        System.out.format("Float value is equal to %f, integer value is equal to %d%n", hold.aFloat, hold.anInt);
         /*Fifth task
         After executing following code
         ...
@@ -40,5 +46,28 @@ public class Main {
         How does a program destroy an object that it creates?
         The program doesn't destroy objects. But if all references to an object has been set to null, it is eligible for garbage collection.
         */
+
+        //MODULE 5
+
+        Vector vector = new Vector();
+        vector.parameters();
+        Vector vector1 = new Vector(1,2,3);
+        vector1.parameters();
+        Vector[] array = Vector.randomVectorsArray(3);
+        array[0].parameters();
+        array[1].parameters();
+        array[2].parameters();
+        array[0].length();
+        System.out.println(Vector.dotProduct());
+        System.out.println(Vector.dotProduct(array[1],array[2]));
+
+        Circle circle = new Circle(5);
+        System.out.println("Circle's area is " + circle.getSquare());
+        Oval oval = new Oval(3,4);
+        System.out.println("Oval's area is " + oval.getSquare());
+        Square square = new Square(6);
+        System.out.println("Square's area is " + square.getSquare());
+        Rectangle1 rectangle = new Rectangle1(7,8);
+        System.out.println("Rectangle's area is " + rectangle.getSquare());
     }
 }
