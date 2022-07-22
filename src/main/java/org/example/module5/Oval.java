@@ -1,14 +1,14 @@
 package org.example.module5;
 
 public class Oval extends Round{
-    private int Radius2;
-    public Oval(int Radius1, int Radius2){
-        this.Radius1 = Radius1;
-        this.Radius2 = Radius2;
+    private int externalRadius;
+    public Oval(int internalRadius, int externalRadius){
+        this.internalRadius = internalRadius;
+        this.externalRadius = externalRadius;
     }
 
     @Override
     public double getSquare() {
-        return Radius1*Radius2*PI;
+        return internalRadius*externalRadius*PI;
     }
 }

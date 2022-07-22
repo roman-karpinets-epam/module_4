@@ -50,16 +50,16 @@ public class Main {
         //MODULE 5
 
         Vector vector = new Vector();
-        vector.parameters();
+        vector.getVectorParameters();
         Vector vector1 = new Vector(1,2,3);
-        vector1.parameters();
-        Vector[] array = Vector.randomVectorsArray(3);
-        array[0].parameters();
-        array[1].parameters();
-        array[2].parameters();
-        array[0].length();
-        System.out.println(Vector.dotProduct());
-        System.out.println(Vector.dotProduct(array[1],array[2]));
+        vector1.getVectorParameters();
+        Vector[] array = Vector.createRandomVectorsArray(3);
+        array[0].getVectorParameters();
+        array[1].getVectorParameters();
+        array[2].getVectorParameters();
+        array[0].calculateVectorLength();
+        System.out.println(Vector.calculateDotProduct());
+        System.out.println(Vector.calculateDotProduct(array[1],array[2]));
 
         Circle circle = new Circle(5);
         System.out.println("Circle's area is " + circle.getSquare());
