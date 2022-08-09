@@ -5,9 +5,9 @@ import java.util.Map;
 
 public class GetDictionary {
 
-    public static Map getDictionary (String input) {
+    public static Map<Character, Integer> getDictionary (String input) {
 
-        Map<Character, Integer> map = new HashMap<Character, Integer>();
+        Map<Character, Integer> map = new HashMap();
 
         for (int i = 0; i < input.length(); i++) {
 
@@ -20,14 +20,6 @@ public class GetDictionary {
                 map.put(c, 1);
             }
         }
-
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            Character key = entry.getKey();
-            Integer value = entry.getValue();
-            System.out.println(key + " " + value);
-        }
-
         return map;
     }
-
 }

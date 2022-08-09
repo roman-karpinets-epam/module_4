@@ -6,11 +6,9 @@ import java.util.TreeSet;
 
 public class RemoveDuplicates {
 
-    public static Collection removeDuplicatesFromCollection(Collection<Integer> collection){
+    public static <T> Collection<T> removeDuplicatesFromCollection(Collection<T> collection){
 
-        Set<Integer> withoutDuplicates = new TreeSet<Integer>(collection);
-
-        return withoutDuplicates;
+        return new TreeSet<T>(collection);
     }
 
 }
